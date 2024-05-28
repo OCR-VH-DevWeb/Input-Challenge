@@ -1,0 +1,20 @@
+<h1>Developer's Page</h1>
+
+<section>
+  <h2>Profile</h2>
+  <ul>
+    <li>Prénom : {{ developper.lastname }}</li>
+    <li>Nom : {{ developper.firstname }}</li>
+    <li>Âge : {{ developper.age }}</li>
+    <li>Sexe : {{ developper.gender }}</li>
+    <li>Biographie : {{ developper.bio }}</li>
+  </ul>
+
+  <h3>Skills :</h3>
+  <ul>
+    @for(item of developper.skills; track item){<app-skill
+      [skill]="item"
+    ></app-skill
+    >}
+  </ul>
+</section>
